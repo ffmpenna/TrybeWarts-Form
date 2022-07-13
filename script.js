@@ -9,3 +9,10 @@ function verifyLogin() {
 }
 
 document.getElementsByTagName('button')[0].addEventListener('click', verifyLogin);
+
+function countChars(obj) {
+  const counter = document.querySelector('#counter');
+  counter.innerHTML = 500 - obj.value.length;
+  console.log(500 - obj.value.length);
+}
+countChars();

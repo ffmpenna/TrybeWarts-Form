@@ -21,3 +21,12 @@ main {
 .trybewarts-login {
   display: flex;
 }
+
+#sec-rate {
+  display: flex;
+}
+
+#sec-textarea {
+  display: flex;
+  flex-direction: column;
+}

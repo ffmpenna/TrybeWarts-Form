@@ -11,3 +11,25 @@ function verifyLogin() {
 document
   .getElementsByTagName('button')[0]
   .addEventListener('click', verifyLogin);
+
+function countChars() {
+  const obj = document.getElementById('textarea');
+  const maxChar = 500;
+  const counter = document.querySelector('#counter');
+  counter.innerHTML = maxChar - obj.value.length;
+  console.log(maxChar - obj.value.length);
+}
+
+document.getElementById('textarea').addEventListener('keyup', countChars);
+
+let count = 0;
+function agreement() {
+  count += 1;
+  if (count % 2 !== 0) {
+    document.getElementById('submit-btn').disabled = false;
+  } else {
+    document.getElementById('submit-btn').disabled = true;
+  }
+}
+
+document.getElementById('agreement').addEventListener('click', agreement);

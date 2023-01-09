@@ -36,11 +36,12 @@ function agreement() {
 document.getElementById("agreement").addEventListener("click", agreement);
 
 function getSubjects() {
-  const subjects = document.querySelectorAll('input[class="subject"]:checked');
+  const subjects = document.querySelectorAll('input[class="form-check-input subject"]:checked');
   const subjectsChecked = [];
   for (let index = 0; index < subjects.length; index += 1) {
     subjectsChecked.push(` ${subjects[index].value}`);
   }
+  console.log(subjectsChecked);
   return subjectsChecked;
 }
 
